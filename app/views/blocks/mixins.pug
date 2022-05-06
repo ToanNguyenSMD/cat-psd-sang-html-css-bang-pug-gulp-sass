@@ -1,5 +1,5 @@
 //- những đoạn code lặp đi lặp lại nhiều lần
-mixin ListItem()
+mixin ListItem(title = "default title", caption = "default caption")
 	li.list-item 
-		h2.list-title list title
-		span.list-caption list caption
+		h2.list-title= title 
+		span.list-caption= caption 
