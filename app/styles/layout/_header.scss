@@ -1,6 +1,7 @@
 .header {
   min-height: 100rem;
   background: linear-gradient(to bottom, rgba($primary-color, 0.8), rgba($secondary-color,0.8)), url("../images/img-header-bg.jpg") no-repeat center / cover ;
+  color: #fff;
   
   &-top {
     padding-top: 3rem;
@@ -95,6 +96,59 @@
       font-weight: bold;
     }
   }
+  
+  &-bottom {
+    margin-top: 15.5rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    // margin-left: -3rem;
+    
+  }
 
+  &-tab-item {
+    border-top: 5px solid #fff;
+    padding-top: 2.5rem;
+    width: calc(25% - 30px);
+    margin-left: 3rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    opacity: 0.8;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      width: 7rem;
+      background-color: $primary-color;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: all 0.25s linear;
+    }
+    &:hover,
+    &.is-active {
+      opacity: 1;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-tab-title {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 2.4rem;
+  }
+
+  &-tab-content {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+  }
   
 }
