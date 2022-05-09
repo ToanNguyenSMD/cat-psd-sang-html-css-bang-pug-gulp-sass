@@ -20,10 +20,6 @@
     display: flex;
     align-items: center;
 
-    &-item:not(:first-child) {
-      margin-left: 3rem;
-    }
-
     &-link {
       color: #fff;
       text-transform: uppercase;
@@ -31,20 +27,14 @@
       padding-bottom: 7px;
       border-bottom: 3px solid transparent;
       transition: all 0.25s linear;
+
+      
     }
     
     &-icon {
       display: inline-block;
       border-bottom: 3px solid transparent;
       padding-bottom: 7px;
-    }
-    &-item:hover > .header-menu-link {
-      color: $secondary-color;
-      border-color: $secondary-color; 
-    }
-    &-item.active > .header-menu-link{
-      color: $secondary-color;
-      border-color: $secondary-color; 
     }
 
     &-icon {
@@ -151,6 +141,16 @@
     font-size: 1.8rem;
   }
 
+  @media screen and (min-width: 768px) {
+    &-menu-item:not(:first-child) {
+      margin-left: 3rem;
+    }
+    &-menu-link:hover {
+      color: $secondary-color;
+      border-color: $secondary-color; 
+    }
+  }
+
   @media screen and(max-width: 1023px) {
     min-height: unset;
 
@@ -163,6 +163,63 @@
     .header-content {
       padding-top: 10rem;
     }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    .header-tab-content {
+      display: none;
+    }
+    .header-content-caption {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .header-content-title {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+    }
+    .header-tab-item {
+      padding-top: 1.5rem;
+    }
+    .header-tab-item:after {
+      width: 40%;
+    }
+    .header-bottom {
+      margin-top: 5rem;
+    }
+    .header-content {
+      padding-top: 5rem;
+    }
+    .header-menu {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #fff;
+      width: 30rem;
+      display: block;
+      padding: 2rem 2.5rem;
+      z-index: 10;
+      transform: translateX(100%);
+      transition: all 0.25s ease-in-out;
+    }
+    .header-menu-item {
+      margin-bottom: 1rem;
+    }
+ 
+    .header-menu-link {
+      color: $title-color;
+      width: 100%;
+      padding: 1.5rem;
+      border-radius: 4px;
+
+      &:hover {
+        color: #fff;
+        background-color: $primary-color;
+      }
+    }
+    
   }
   
 }
