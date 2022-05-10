@@ -217,20 +217,20 @@ body {
   margin: 0 auto;
   padding: 0 15px; }
 
-.block-header {
+.block-box {
   text-align: center; }
-  .block-header-caption {
+  .block-box-caption {
     font-family: "Kaushan Script", cursive;
     font-size: 2.4rem;
     margin-bottom: 2rem; }
-  .block-header-title {
+  .block-box-title {
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     margin-bottom: 3.5rem;
     position: relative; }
-    .block-header-title:before {
+    .block-box-title:before {
       content: "";
       width: 7rem;
       height: 0.4rem;
@@ -240,7 +240,7 @@ body {
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       bottom: 0; }
-  .block-header-desc {
+  .block-box-desc {
     font-size: 1.5rem;
     font-family: "Roboto", sans-serif;
     color: #999;
@@ -254,5 +254,72 @@ body {
 
 .about {
   padding-top: 9.3rem;
-  padding-bottom: 11rem;
-  background-color: #fff; }
+  padding-bottom: 11rem; }
+  .about-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-left: -3rem; }
+  .about-item {
+    margin-left: 3rem;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear; }
+  .about-item:hover {
+    -webkit-transform: translate(-1rem, -1rem);
+    transform: translate(-1rem, -1rem); }
+    .about-item:hover .about-content {
+      opacity: 1;
+      visibility: visible; }
+    .about-item:hover:after {
+      -webkit-transform: translate(1rem, 1rem);
+      transform: translate(1rem, 1rem); }
+  .about-item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #95e1d3;
+    z-index: -1;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear; }
+  .about-content {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(233, 131, 130, 0.8)), to(rgba(238, 216, 137, 0.8)));
+    background: linear-gradient(to bottom, rgba(233, 131, 130, 0.8), rgba(238, 216, 137, 0.8));
+    z-index: 2;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: bold; }
+  .about-icon {
+    margin-bottom: 1rem; }
