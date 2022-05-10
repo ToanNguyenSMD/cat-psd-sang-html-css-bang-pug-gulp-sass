@@ -141,6 +141,12 @@
     font-size: 1.8rem;
   }
 
+  &-toggle {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+
   @media screen and (min-width: 768px) {
     &-menu-item:not(:first-child) {
       margin-left: 3rem;
@@ -204,11 +210,15 @@
       transform: translateX(100%);
       transition: all 0.25s ease-in-out;
     }
+    .header-menu.is-expand {
+      transform: translateX(0);
+    }
     .header-menu-item {
       margin-bottom: 1rem;
     }
  
-    .header-menu-link {
+    .header-menu-link,
+    .header-menu-icon {
       color: $title-color;
       width: 100%;
       padding: 1.5rem;
@@ -218,6 +228,15 @@
         color: #fff;
         background-color: $primary-color;
       }
+    }
+
+    .header-toggle {
+      display: inline-block;
+      
+    }
+
+    .header-toggle:active + .header-menu {
+      transform: translateX(-50px);
     }
     
   }
