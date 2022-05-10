@@ -146,7 +146,7 @@ body {
     .header-menu-link:hover {
       color: #eed889;
       border-color: #eed889; } }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1203px) {
     .header {
       min-height: unset; }
       .header .header-content-title {
@@ -318,6 +318,8 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: 1920px;
+    flex-wrap: 1920px;
     text-transform: uppercase;
     font-size: 1.8rem;
     font-weight: bold; }
