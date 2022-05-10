@@ -75,15 +75,15 @@ body {
       position: relative;
       margin-bottom: 5rem; }
       .header-content-title:before {
-        position: absolute;
         content: " ";
         width: 6rem;
         height: 5px;
         background-color: #fff;
-        bottom: 0;
+        position: absolute;
         left: 50%;
         -webkit-transform: translateX(-50%);
-        transform: translateX(-50%); }
+        transform: translateX(-50%);
+        bottom: 0; }
     .header-content-more {
       color: #fff;
       font-size: 2rem;
@@ -113,8 +113,8 @@ body {
     .header-tab-item:after {
       content: "";
       position: absolute;
-      height: 5px;
       width: 7rem;
+      height: 5px;
       background-color: #e98382;
       top: 0;
       left: 0;

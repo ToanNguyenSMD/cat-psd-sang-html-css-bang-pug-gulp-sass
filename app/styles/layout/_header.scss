@@ -64,14 +64,16 @@
       margin-bottom: 5rem;
 
       &:before {
-        position: absolute;
         content: " ";
-        width: 6rem;
-        height: 5px;
+        @include size(6rem, 5px);
+        // width: 6rem;
+        // height: 5px;
         background-color: #fff;
+        @include absoluteCenter("left");
+        // position: absolute;
+        // left: 50%;
+        // transform: translateX(-50%);
         bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
 
       }
     }
@@ -110,8 +112,9 @@
     &:after {
       content: "";
       position: absolute;
-      height: 5px;
-      width: 7rem;
+      @include size(7rem, 5px);
+      // height: 5px;
+      // width: 7rem;
       background-color: $primary-color;
       top: 0;
       left: 0;
