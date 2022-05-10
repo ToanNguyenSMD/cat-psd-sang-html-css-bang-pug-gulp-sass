@@ -5,18 +5,25 @@ header.header
       i.fa.fa-bars.header-toggle
         
       ul.header-menu
-        li.header-menu-item(class="active")
-          a.header-menu-link(href="#") Home
-        li.header-menu-item
-          a.header-menu-link(href="#") About
-        li.header-menu-item
-          a.header-menu-link(href="#") Service
-        li.header-menu-item
-          a.header-menu-link(href="#") Work
-        li.header-menu-item
-          a.header-menu-link(href="#") Blog
-        li.header-menu-item
-          a.header-menu-link(href="#") Contact
+        +menuLink("Home")
+        +menuLink("About")
+        +menuLink("Service")
+        +menuLink("Work")
+        +menuLink("Blog")
+        +menuLink("Contact")
+        //-  li.header-menu-item
+        //-   a.header-menu-link(href="#") Home
+        //- li.header-menu-item
+        //-   a.header-menu-link(href="#") About
+        //- li.header-menu-item
+        //-   a.header-menu-link(href="#") Service
+        //- li.header-menu-item
+        //-   a.header-menu-link(href="#") Work
+        //- li.header-menu-item
+        //-   a.header-menu-link(href="#") Blog
+        //- li.header-menu-item
+        //-   a.header-menu-link(href="#") Contact
+       
         li.header-menu-item
           a.header-menu-icon(href="#")
             i.fa.fa-shopping-cart
@@ -29,15 +36,19 @@ header.header
       h1.header-content-title Welcome to Mogo
       a.header-content-more(href="#") Learn more
     .header-bottom
-      .header-tab-item.is-active
-        span.header-tab-title 01
-        span.header-tab-content Intro
-      .header-tab-item
-        span.header-tab-title 02
-        span.header-tab-content Work
-      .header-tab-item
-        span.header-tab-title 03
-        span.header-tab-content About
-      .header-tab-item
-        span.header-tab-title 04
-        span.header-tab-content Contacts
+      +headerTab(01, "Intro")
+      +headerTab(02, "Work")
+      +headerTab(03, "About")
+      +headerTab(04, "Contacts")
+      //- .header-tab-item.is-active
+      //-   span.header-tab-title 01
+      //-   span.header-tab-content Intro
+      //- .header-tab-item
+      //-   span.header-tab-title 02
+      //-   span.header-tab-content Work
+      //- .header-tab-item
+      //-   span.header-tab-title 03
+      //-   span.header-tab-content About
+      //- .header-tab-item
+      //-   span.header-tab-title 04
+      //-   span.header-tab-content Contacts
