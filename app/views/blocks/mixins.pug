@@ -16,3 +16,11 @@ mixin headerTab(number, text)
   .header-tab-item
     span.header-tab-title=  number 
     span.header-tab-content= text
+
+//- header của mỗi block
+mixin blockHeader(caption, title, desc)
+  .block-header
+    h3.block-header-caption= caption
+    h2.block-header-title= title
+    if desc 
+      p.block-header-desc= desc
