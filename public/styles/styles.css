@@ -269,8 +269,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -340,7 +338,75 @@ body {
       padding-top: 5rem;
       padding-bottom: 5rem; }
       .about-list {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
         padding: 1rem; }
       .about-item {
         margin-bottom: 3rem;
         width: 100%; } }
+
+.number {
+  background-color: #95e1d3;
+  color: #fff; }
+  .number-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-wrap: 1920px;
+    flex-wrap: 1920px; }
+  .number-item {
+    width: 20%;
+    border-left: 1px solid #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: 1920px;
+    flex-wrap: 1920px;
+    padding: 8.5rem 3rem;
+    text-align: center; }
+    .number-item:last-child {
+      border-right: 1px solid #fff; }
+    .number-item-count {
+      font-size: 7rem;
+      font-weight: bold;
+      margin-bottom: 2rem; }
+    .number-item-text {
+      text-transform: uppercase;
+      line-height: 1.4; }
+  @media screen and (max-width: 1023px) {
+    .number-item {
+      padding: 5rem 1.5rem; }
+    .number-item-count {
+      font-size: 5rem;
+      margin-bottom: 1rem; } }
+  @media screen and (max-width: 767px) {
+    .number-list {
+      display: block; }
+    .number-item {
+      width: 100%;
+      border-left: 0;
+      padding: 2.5rem 1.5rem; }
+    .number-item:last-child {
+      border-right: 0; }
+    .number-item:not(:last-child) {
+      border-bottom: 1px solid #fff; } }
