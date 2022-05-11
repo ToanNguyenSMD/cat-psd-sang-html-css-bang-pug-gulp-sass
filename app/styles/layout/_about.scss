@@ -14,6 +14,7 @@
     position: relative;
     cursor: pointer;
     transition: all 0.25s linear;
+    // width: calc(33.33% - 30px);
   }
   &-item:hover {
     transform: translate(-1rem, -1rem);
@@ -52,6 +53,27 @@
   }
   &-icon {
     margin-bottom: 1rem;
+  }
+
+  @include maxWidth(767px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    &-list {
+      // flex-wrap: nowrap;
+      // overflow-x: auto;
+      padding: 1rem;
+      // scroll-snap-type: x mandatory;
+      // scroll-snap-stop: always;
+      // @include hideScroll();
+    }
+
+    &-item {
+      margin-bottom: 3rem;
+      width: 100%;
+      // scroll-snap-align: center;
+    }
+   
   }
 
   

@@ -1,26 +1,33 @@
 //- những đoạn code lặp đi lặp lại nhiều lần
 mixin ListItem(title = "default title", caption)
-  li.list-item 
-    h2.list-title= title 
-    if caption 
-      span.list-caption= caption 
-      //- giống slot, điền thêm đoạn html mà k khai báo trong mixin
-    if block
-      block
+	li.list-item 
+		h2.list-title= title 
+		if caption 
+			span.list-caption= caption 
+			//- giống slot, điền thêm đoạn html mà k khai báo trong mixin
+		if block
+			block
 
 mixin menuLink(title, link="#")
-  li.header-menu-item
-    a.header-menu-link(href=link)=title
+	li.header-menu-item
+		a.header-menu-link(href=link)=title
 
 mixin headerTab(number, text)
-  .header-tab-item
-    span.header-tab-title=  number 
-    span.header-tab-content= text
+	.header-tab-item
+		span.header-tab-title=  number 
+		span.header-tab-content= text
 
 //- header của mỗi block
 mixin blockBox(caption, title, desc)
-  .block-box
-    h3.block-box-caption= caption
-    h2.block-box-title= title
-    if desc 
-      p.block-box-desc= desc
+	.block-box
+		h3.block-box-caption= caption
+		h2.block-box-title= title
+		if desc 
+			p.block-box-desc= desc
+
+mixin aboutItem(src, title, icon, alt="")
+	li.about-item
+		img.about-image(src= src, alt= alt)
+		.about-content
+			i.about-icon(class = icon)
+			p.about-text= title 

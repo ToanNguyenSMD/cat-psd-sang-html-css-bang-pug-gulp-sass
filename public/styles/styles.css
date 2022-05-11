@@ -251,6 +251,16 @@ body {
     margin-bottom: 5rem;
     margin-left: auto;
     margin-right: auto; }
+  @media screen and (max-width: 767px) {
+    .block-box-caption {
+      font-size: 2rem; }
+    .block-box-title {
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem; }
+    .block-box-desc {
+      font-size: 1.4rem;
+      margin-bottom: 4rem; } }
 
 .about {
   padding-top: 9.3rem;
@@ -325,3 +335,12 @@ body {
     font-weight: bold; }
   .about-icon {
     margin-bottom: 1rem; }
+  @media screen and (max-width: 767px) {
+    .about {
+      padding-top: 5rem;
+      padding-bottom: 5rem; }
+      .about-list {
+        padding: 1rem; }
+      .about-item {
+        margin-bottom: 3rem;
+        width: 100%; } }
