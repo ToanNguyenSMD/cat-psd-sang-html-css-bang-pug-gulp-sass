@@ -31,3 +31,10 @@ mixin aboutItem(src, title, icon, alt="")
 		.about-content
 			i.about-icon(class = icon)
 			p.about-text= title 
+
+mixin serviceItem(icon, title, content)
+	.service-item
+		img.service-image(src= icon)
+		.service-content
+			h4.service-title= title
+			p.service-desc= content
