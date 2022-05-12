@@ -4,8 +4,8 @@
 }
 
 //absolute center
-@mixin absoluteCenter($direction: "left") {
-  position: absolute;
+@mixin absoluteCenter($direction: "left", $position: absolute) {
+  position: $position;
 
   @if($direction == "left") {
     left: 50%;
