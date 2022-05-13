@@ -672,3 +672,8 @@ body {
         margin-bottom: 1rem; }
       .quote-content {
         padding: 0.5rem; } }
+
+.team {
+  padding: 8rem 10rem; }
+  .team-item {
+    width: calc(33.33% - 2rem); }
