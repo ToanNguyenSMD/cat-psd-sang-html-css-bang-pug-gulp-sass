@@ -38,3 +38,12 @@ mixin serviceItem(icon, title, content)
 		.service-content
 			h4.service-title= title
 			p.service-desc= content
+
+mixin wedoItem(icon, title, content, active="")
+	.wedo-item(class=active)
+		.wedo-item-header
+			img(src= icon, alt="").wedo-item-icon
+			h3.wedo-item-title= title
+			i.fal.fa-angle-up.wedo-item-arrow
+		.wedo-item-content
+			.wedo-item-text= content

@@ -505,4 +505,103 @@ body {
       margin-bottom: -4.3rem; } }
 
 .wedo {
-  padding: 9rem 3rem; }
+  padding: 9rem 0rem; }
+  .wedo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-wrap: 1920px;
+    flex-wrap: 1920px; }
+  .wedo-image, .wedo-content {
+    width: calc(50% - 1.5rem); }
+  .wedo-image {
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .wedo-item {
+    border-collapse: collapse;
+    margin-bottom: 1rem; }
+    .wedo-item-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-wrap: 1920px;
+      flex-wrap: 1920px;
+      padding: 1.5rem 2rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid #ccc; }
+    .wedo-item-icon {
+      margin-right: 1.5rem; }
+    .wedo-item-title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden; }
+    .wedo-item-arrow {
+      margin-left: auto;
+      color: #ccc;
+      font-size: 2.5rem; }
+    .wedo-item-content {
+      padding: 1.5rem;
+      color: #999;
+      font-size: 1.3rem;
+      line-height: 1.4;
+      font-family: "Roboto", sans-serif;
+      font-style: italic;
+      border: 1px solid #ccc;
+      border-top: none;
+      display: none; }
+    .wedo-item-text {
+      height: 13rem;
+      overflow-y: auto;
+      padding-right: 1.5rem; }
+      .wedo-item-text::-webkit-scrollbar {
+        width: 6px; }
+      .wedo-item-text::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+        border-radius: 2rem; }
+      .wedo-item-text::-webkit-scrollbar-thumb {
+        background-color: #95e1d3;
+        border-radius: 2rem; }
+    .wedo-item.active .wedo-item-content {
+      display: block; }
+  @media screen and (max-width: 1023px) {
+    .wedo {
+      padding: 5rem 0; } }
+  @media screen and (max-width: 767px) {
+    .wedo-container {
+      display: block; }
+    .wedo-image, .wedo-content {
+      width: 100%; }
+    .wedo-image {
+      margin-bottom: 3rem; } }
+
+.test {
+  height: 40rem;
+  width: 58rem;
+  background-image: url("../images/img-wedo.png");
+  position: relative; }
+  .test-background {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
