@@ -1,0 +1,71 @@
+.quote {
+  background-color: $gray-color;
+  padding: 6rem 2rem;
+
+  &-container {
+    @include flexbox(center, space-between);
+  }
+
+  &-arrow {
+    font-size: 3rem;
+    color: $gray-dark-color;
+    @include size(4rem);
+    cursor: pointer;
+  }
+
+  &-image {
+    border: 2px solid $third-color;
+    padding: 2rem;
+    margin-left: 5rem;
+    // margin-right: 4rem;
+  }
+
+  &-content {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  &-text {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: $text-color;
+    margin-bottom: 3rem;
+  }
+
+  &-sign {
+    font-family: $third-font;
+    font-size: 1.8rem;
+    color: $text-color;
+    padding-left: 6rem;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 5rem;
+      height: 2px;
+      background-color: $primary-color;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include maxWidth(767px) {
+    padding: 2rem;
+    &-image {
+      display: none;
+    }
+    &-text, &-sign {
+      font-size: 1.3rem;
+      line-height: 1.2;
+      font-weight: 300;
+    }
+    &-text {
+      margin-bottom: 1rem;
+    }
+    &-content {
+      padding: 0.5rem;
+    }
+  }
+}
