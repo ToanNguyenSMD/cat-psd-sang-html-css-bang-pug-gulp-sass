@@ -676,4 +676,55 @@ body {
 .team {
   padding: 8rem 10rem; }
   .team-item {
-    width: calc(33.33% - 2rem); }
+    width: calc(33.33% - 2rem);
+    cursor: pointer; }
+    .team-item-top {
+      position: relative;
+      -webkit-transition: all 0.25s linear;
+      transition: all 0.25s linear; }
+      .team-item-top:hover {
+        -webkit-transform: translate(-10px, -10px);
+        transform: translate(-10px, -10px);
+        -webkit-box-shadow: 10px 10px 0 0 #95e1d3;
+        box-shadow: 10px 10px 0 0 #95e1d3; }
+  .team-overlay {
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(233, 131, 130, 0.8)), to(rgba(238, 216, 137, 0.8)));
+    background-image: linear-gradient(to bottom, rgba(233, 131, 130, 0.8), rgba(238, 216, 137, 0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear; }
+  .team-social {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: 1920px;
+    flex-wrap: 1920px; }
+  .team-icon {
+    font-size: 2rem;
+    padding: 1rem;
+    color: #e98382;
+    background-color: #eed889;
+    margin-right: 2px;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear; }
+    .team-icon:hover {
+      color: white;
+      background-color: #e98382; }
