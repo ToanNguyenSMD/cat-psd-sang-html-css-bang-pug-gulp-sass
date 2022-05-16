@@ -1,17 +1,25 @@
 .team {
-  padding: 8rem 10rem;
+  padding: 8rem 0rem;
+
+  &-list {
+    @include flexbox(stretch, space-between);
+  }
 
   &-item {
     width: calc(33.33% - 2rem);
-    cursor: pointer;
 
     &-top {
       position: relative;
       transition: all 0.25s linear;
+      cursor: pointer;
 
       &:hover {
         transform: translate(-10px,-10px);
         box-shadow: 10px 10px 0 0 $third-color;
+        .team-overlay {
+          opacity: 1;
+          visibility: visible;
+        }
       }
 
     }
@@ -29,15 +37,6 @@
     visibility: hidden;
     transition: all 0.25s linear;
 
-    &:hover {
-      // opacity: 1;
-      // visibility: visible;
-      // box-shadow: 1rem 1rem 0 0 $third-color;
-      // transform: translate(-10px,-10px);
-      // background-color: red;
-
-      // transform: translate(1rem, 1rem);
-    }
   }
 
   &-social {
@@ -57,6 +56,37 @@
     &:hover {
       color: white;
       background-color: $primary-color;
+    }
+  }
+
+  &-content {
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  &-name {
+    color: $title-color;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &-position {
+    font-style: italic;
+    font-size: 1.3rem;
+    font-family: $secondary-font;
+    color: $text-color;
+  }
+
+  @include maxWidth(767px) {
+    padding: 3rem 0rem;
+
+    &-list {
+      display: block;
+    }
+
+    &-item {
+      width: 100%;
+      margin-bottom: 3rem;
     }
   }
 }
